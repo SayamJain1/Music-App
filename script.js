@@ -27,6 +27,7 @@ let currentTimeEl = document.querySelector('.current-time')
 let currAudio = document.querySelector("audio");
 let songIndex = 0;
 let isPlaying = false;
+songContainer.innerHTML = 'Loading Songs...'
 
 // Fetching DATA
 
@@ -41,6 +42,9 @@ const options = {
 fetch("https://shazam-core.p.rapidapi.com/v1/charts/world", options)
   .then((response) => response.json())
   .then((response) => {
+    if (response) {
+      songContainer.innerText = ''
+    }
     response.map((songs, i) => {
       let mainDiv = document.createElement("div");
       mainDiv.classList = "song-card";
