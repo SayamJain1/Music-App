@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Music app</title>
+</head>
+<body>
+    
+    <section class="main">
+        <nav class="navbar">
+            <!-- add image -->
+            <h2>Music Player.</h2>
+            <!-- <input type="text" placeholder="Search song"> -->
+        </nav>
+
+        <div class="song-container">
+            <h3 class="check"></h3>
+            
+            <!-- Dynamic DATA  -->
+
+        </div>
+
+        <audio src="" autoplay></audio>
+
+        <div class="music-player hidden">
+
+            <div class="song-detail">
+                <h3 class="playerSongName"></h3>
+            </div>
+
+            <div class="song-controls">
+                <div class="seek-container">
+                    <div class="current-time">00:00</div>
+                    <input type="range" min="1" max="100" value="0" step="any" class="seek-slider" >
+                    <div class="total-duration">00:00</div>
+                </div>
+
+                <div class="buttons">
+                    <div class="prev-track">
+                        <i class="fa fa-step-backward fa-2x" id="prev"></i>
+                    </div>
+                    <div class="playpause-track">
+                        <i class="fa fa-play-circle fa-2x" id="play"></i>
+                    </div>
+                    <div class="next-track">
+                        <i class="fa fa-step-forward fa-2x" id="next"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="volume-container">
+                <i class="fa fa-volume-down"></i>
+                <input type="range" min="1" max="100" value="99" class="volume-slider">
+                <i class="fa fa-volume-up"></i>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- <script  src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script> -->
+    <script type='module' src="script.js"></script>
+</body>
+</html>

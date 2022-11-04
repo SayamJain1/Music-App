@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f1f8e9;
+}
+
+.main {
+  height: 100%;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 3rem;
+  box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.song-container {
+  padding: 3rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.song-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 1rem;
+  cursor: pointer;
+
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.song-name{
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.song-title{
+  width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+img {
+  object-fit: cover;
+  width: 120px;
+  height: 120px;
+  border-radius: 5px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.music-player {
+  color: white;
+  padding: 0rem 2rem 0 2rem;
+  border: 1px solid rgb(10, 10, 10);
+  height: 6rem;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top-left-radius: 19px;
+  border-top-right-radius: 19px;
+
+  /* glass morphism */
+  background: rgba(37, 35, 37, 0.55);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(4px);
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.playerSongName {
+  /* width: 100; */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.song-detail {
+  width: 30%;
+}
+
+.song-controls {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.seek-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.seek-container input {
+  width: 75%;
+  margin: 0rem 0.5rem;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.volume-container {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.volume-container input {
+  margin: 0rem 0.5rem;
+}
