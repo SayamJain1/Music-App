@@ -87,7 +87,6 @@ fetch("https://shazam-core.p.rapidapi.com/v1/charts/world", options)
     };
 
     playBtn.addEventListener("click", () => {
-      console.log("clicked");
       if (isPlaying) pauseMusic();
       else playMusic();
     });
@@ -96,7 +95,6 @@ fetch("https://shazam-core.p.rapidapi.com/v1/charts/world", options)
       if (songIndex < response.length - 1) {
         songIndex++;
       } else songIndex = 0;
-      console.log(songIndex);
 
       currAudio.src = response[songIndex].hub.actions[1].uri;
       playMusic();
@@ -104,7 +102,6 @@ fetch("https://shazam-core.p.rapidapi.com/v1/charts/world", options)
 
     const prev = () => {
       songIndex = (songIndex - 1 + response.length) % response.length;
-      console.log(songIndex);
 
       currAudio.src = response[songIndex].hub.actions[1].uri;
       playMusic();
@@ -149,8 +146,7 @@ fetch("https://shazam-core.p.rapidapi.com/v1/charts/world", options)
     });
   })
   .catch((err) => {
-    console.log(err.message);
-    console.log(err);
+
     let h2 = document.createElement("h2");
     h2.innerText = "Something went wrong please try again!";
     songContainer.appendChild(h2);
