@@ -42,6 +42,7 @@ const options = {
 fetch("https://shazam-core.p.rapidapi.com/v1/charts/world", options)
   .then((response) => response.json())
   .then((response) => {
+    // console.log(response)
     if (response) {
       songContainer.innerText = "";
     }
@@ -146,8 +147,8 @@ fetch("https://shazam-core.p.rapidapi.com/v1/charts/world", options)
     });
   })
   .catch((err) => {
-
     let h2 = document.createElement("h2");
-    h2.innerText = "Something went wrong please try again!";
+    // h2.innerText = "Something went wrong please try again!";
+    h2.innerText = "⚠️In Maintenance (API isn't working) i'm on it!";
     songContainer.appendChild(h2);
   });
